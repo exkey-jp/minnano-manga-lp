@@ -80,13 +80,21 @@ button,input,select{font:inherit}
 
 /* 実例カード */
 .slider{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-18px;padding:2px 18px 6px}
-.case{flex:0 0 72%;scroll-snap-align:center;border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:4px;text-align:left;background:var(--paper);font-size:12.5px}
-.case .who{font-weight:700}
-.case .eq{color:var(--sub);font-size:11.5px}
-.case .ba{color:var(--sub)}
-.case .af{font-size:13px}
-.case .af b{font-size:28px;color:var(--red);font-weight:900}
-.case .yr{justify-self:start;font-size:12px;font-weight:700;background:var(--mark);border-radius:4px;padding:1px 8px}
+.case{flex:0 0 78%;scroll-snap-align:center;border:1px solid var(--line);border-radius:12px;padding:14px 12px;display:grid;gap:4px;text-align:center;background:var(--paper);font-size:12.5px}
+.case .who{font-weight:900;font-size:15px}
+.case .eq{color:var(--sub);font-size:11.5px;margin-bottom:4px}
+.case .bf,.case .af{border-radius:10px;padding:6px 8px;display:grid;line-height:1.25}
+.case .bf{background:#eef1f5}
+.case .af{background:#fff1e2;border:2px solid var(--cta)}
+.case .bf span,.case .af span{font-size:11.5px;font-weight:700;color:var(--sub)}
+.case .bf b{font-size:30px;font-weight:900;color:var(--navy);font-variant-numeric:tabular-nums}
+.case .af b{font-size:30px;font-weight:900;color:var(--red);font-variant-numeric:tabular-nums}
+.case b small{font-size:13px;margin-left:2px}
+.case .dn{font-style:normal;color:var(--cta);font-size:16px;line-height:1}
+.case .cut{margin:6px 0 0;font-size:14px;font-weight:700;line-height:1.5}
+.case .cut b{font-size:22px;color:var(--red);font-weight:900}
+.case .cut em{display:inline-block;font-style:normal;font-size:12px;font-weight:900;color:#fff;background:var(--red);border-radius:999px;padding:0 10px;margin-left:6px;vertical-align:3px}
+.case .yr{justify-self:center;font-size:12px;font-weight:700;background:var(--mark);border-radius:4px;padding:1px 8px}
 
 /* 表 */
 table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
@@ -227,11 +235,43 @@ details.acc .in{padding:0 12px 12px;font-size:13px;display:grid;gap:6px}
 <!-- 実例カード・このページでわかること（ワイヤー01） -->
 <section class="sec soft">
   <p class="hd sm">太陽光＋蓄電池で、<br><span class="mk">電気代はこう変わる</span></p>
-  <div class="slider" aria-label="導入例">
-    <div class="case"><span class="who">千葉県・4人家族</span><span class="eq">太陽光6.2kW＋蓄電池9.8kWh</span><span class="ba">月の電気代 <s>31,800円</s></span><span class="af">→ <b>3,200円</b></span><span class="yr">年間 約34.3万円の差</span></div>
-    <div class="case"><span class="who">群馬県・3人家族</span><span class="eq">太陽光5.5kW＋蓄電池7.0kWh</span><span class="ba">月の電気代 <s>24,200円</s></span><span class="af">→ <b>2,400円</b></span><span class="yr">年間 約26.2万円の差</span></div>
-    <div class="case"><span class="who">埼玉県・2人暮らし</span><span class="eq">蓄電池7.4kWh（売電終了後）</span><span class="ba">月の電気代 <s>18,600円</s></span><span class="af">→ <b>1,900円</b></span><span class="yr">年間 約20.0万円の差</span></div>
-    <div class="case"><span class="who">東京都・4人家族</span><span class="eq">太陽光4.8kW＋蓄電池6.5kWh</span><span class="ba">月の電気代 <s>22,000円</s></span><span class="af">→ <b>2,200円</b></span><span class="yr">年間 約23.8万円の差</span></div>
+  <div class="slider" aria-label="モデルケース">
+    <div class="case"><span class="who">千葉県・4人家族</span><span class="eq">太陽光6.2kW＋蓄電池9.8kWh</span>
+      <div class="bf"><span>導入前の電気代</span><b>31,800<small>円/月</small></b></div>
+      <i class="dn" aria-hidden="true">▼</i>
+      <div class="af"><span>導入後の電気代</span><b>3,200<small>円/月</small></b></div>
+      <p class="cut">毎月 <b>28,600円</b> 削減<em>約90%カット</em></p>
+      <span class="yr">年間 約34.3万円の差</span></div>
+    <div class="case"><span class="who">宮城県・4人家族</span><span class="eq">太陽光5.8kW＋蓄電池9.8kWh</span>
+      <div class="bf"><span>導入前の電気代</span><b>28,400<small>円/月</small></b></div>
+      <i class="dn" aria-hidden="true">▼</i>
+      <div class="af"><span>導入後の電気代</span><b>2,800<small>円/月</small></b></div>
+      <p class="cut">毎月 <b>25,600円</b> 削減<em>約90%カット</em></p>
+      <span class="yr">年間 約30.7万円の差</span></div>
+    <div class="case"><span class="who">群馬県・3人家族</span><span class="eq">太陽光5.5kW＋蓄電池7.0kWh</span>
+      <div class="bf"><span>導入前の電気代</span><b>24,200<small>円/月</small></b></div>
+      <i class="dn" aria-hidden="true">▼</i>
+      <div class="af"><span>導入後の電気代</span><b>2,400<small>円/月</small></b></div>
+      <p class="cut">毎月 <b>21,800円</b> 削減<em>約90%カット</em></p>
+      <span class="yr">年間 約26.2万円の差</span></div>
+    <div class="case"><span class="who">福島県・3人家族</span><span class="eq">蓄電池7.4kWh（売電終了後）</span>
+      <div class="bf"><span>導入前の電気代</span><b>21,500<small>円/月</small></b></div>
+      <i class="dn" aria-hidden="true">▼</i>
+      <div class="af"><span>導入後の電気代</span><b>2,200<small>円/月</small></b></div>
+      <p class="cut">毎月 <b>19,300円</b> 削減<em>約90%カット</em></p>
+      <span class="yr">年間 約23.2万円の差</span></div>
+    <div class="case"><span class="who">埼玉県・2人暮らし</span><span class="eq">蓄電池7.4kWh（売電終了後）</span>
+      <div class="bf"><span>導入前の電気代</span><b>18,600<small>円/月</small></b></div>
+      <i class="dn" aria-hidden="true">▼</i>
+      <div class="af"><span>導入後の電気代</span><b>1,900<small>円/月</small></b></div>
+      <p class="cut">毎月 <b>16,700円</b> 削減<em>約90%カット</em></p>
+      <span class="yr">年間 約20.0万円の差</span></div>
+    <div class="case"><span class="who">東京都・4人家族</span><span class="eq">太陽光4.8kW＋蓄電池6.5kWh</span>
+      <div class="bf"><span>導入前の電気代</span><b>22,000<small>円/月</small></b></div>
+      <i class="dn" aria-hidden="true">▼</i>
+      <div class="af"><span>導入後の電気代</span><b>2,200<small>円/月</small></b></div>
+      <p class="cut">毎月 <b>19,800円</b> 削減<em>約90%カット</em></p>
+      <span class="yr">年間 約23.8万円の差</span></div>
   </div>
   <p class="fine">※当社試算のモデルケースです（実在のお客様の事例ではありません）。電力会社の基本料金は残ります。プラン・機器・使い方で異なります</p>
   <p class="hd sm" style="margin-top:8px">このページでわかること</p>
