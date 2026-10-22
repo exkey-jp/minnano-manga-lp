@@ -52,7 +52,7 @@ h1{margin:0;font-size:24px;font-weight:900;line-height:1.4}
   try { d = JSON.parse(sessionStorage.getItem('diagResult') || 'null'); } catch(e){}
   // 確認用：?demo=1 でサンプル表示
   if(!d && new URLSearchParams(location.search).has('demo')){
-    d = {isTarget:true, q1text:'2万〜3万円', save:5000, year:60000, q3text:'太陽光発電', q4text:'3ヶ月以内', interest:'pv',
+    d = {isTarget:true, q1text:'2万〜3万円', save:22500, year:270000, q3text:'太陽光発電', q4text:'3ヶ月以内', interest:'pv',
       plan:{h:'太陽光でどれだけ下がるか', items:['屋根に何kW載せられるか','発電した電気をどれだけ自宅で使えるか','余った電気を売った場合の収入']}};
   }
   const out = document.getElementById('out');
@@ -75,7 +75,7 @@ h1{margin:0;font-size:24px;font-weight:900;line-height:1.4}
   yr.append('年間では ', el('b','','約' + yen(d.year) + '円'), ' の削減が期待できます');
   box.append(amt, yr);
   out.append(box);
-  out.append(el('p','fine','※ご回答いただいた電気代（' + d.q1text + '）をもとにした目安です。ご自宅の条件・設備・電気の使い方によって変わります。'));
+  out.append(el('p','fine','※ご回答いただいた電気代（' + d.q1text + '）から、太陽光＋蓄電池で約9割削減した場合の目安です。電力会社の基本料金は残ります。ご自宅の条件・設備・電気の使い方によって変わります。'));
 
   if(!d.isTarget){
     const n = el('div','notarget');

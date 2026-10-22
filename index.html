@@ -562,14 +562,14 @@ details.acc .in{padding:0 12px 12px;font-size:13px;display:grid;gap:6px}
   });
 
   /* ===== 電気代削減シミュレーション =====
-     15_amazon-gift-electricity（電気代削減診断）と同じ設問・選択肢・想定削減額・送信データの形。
-     想定削減額（3,200／4,500／5,000／7,500円）は15番と同じ数字（算定根拠はクライアント未確認） */
+     15_amazon-gift-electricity（電気代削減診断）と同じ設問・選択肢・送信データの形。
+     想定削減額はユーザー指定で「約9割削減」：各帯の目安額（8,000／15,000／25,000／30,000円〜）の90% */
   const STEPS = [
     {q:'毎月の電気代はどのくらいですか？', note:'いちばん高い月（夏・冬）で教えてください', options:[
-      {t:'1万円未満',  emoji:'🪙', bill:1, save:3200, year:38400},
-      {t:'1万〜2万円', emoji:'💴', bill:2, save:4500, year:54000},
-      {t:'2万〜3万円', emoji:'💰', bill:3, save:5000, year:60000},
-      {t:'3万円以上',  emoji:'🏦', bill:4, save:7500, year:90000}]},
+      {t:'1万円未満',  emoji:'🪙', bill:1, save:7200, year:86400},
+      {t:'1万〜2万円', emoji:'💴', bill:2, save:13500, year:162000},
+      {t:'2万〜3万円', emoji:'💰', bill:3, save:22500, year:270000},
+      {t:'3万円以上',  emoji:'🏦', bill:4, save:27000, year:324000}]},
     {q:'お住まいは持ち家の一戸建てですか？', note:'ご相談は持ち家戸建ての方が対象です', qualifier:true, options:[
       {t:'はい（持ち家の一戸建て）', emoji:'🏠', qualify:true},
       {t:'いいえ（賃貸・マンションなど）', emoji:'🏢'}]},
